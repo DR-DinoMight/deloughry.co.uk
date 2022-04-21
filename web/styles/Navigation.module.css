@@ -1,0 +1,20 @@
+.title {
+    margin: 0;
+    font-weight: 500;
+    width: 11em;
+    @apply text-red-500 text-xl md:text-2xl;
+}
+
+.title.small {
+    @apply text-lg md:text-xl;
+}
+
+.title:hover span {
+    display: none;
+    transition: all 1s ease-in-out;
+}
+.title:hover:before {
+    content: 'aka \a DR_DinoMight';
+    white-space: pre;
+    @apply text-yellow-500;
+}

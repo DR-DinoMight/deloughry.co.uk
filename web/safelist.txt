@@ -1,0 +1,3 @@
+bg-pink
+border-l-purple-500
+bg-purple/20

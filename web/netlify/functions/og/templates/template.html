@@ -1,0 +1,77 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+
+<style>
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .left {
+        /* take up only 1/3 of the width of the container*/
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right {
+        /* take up only 2/3 of the width of the container*/
+        padding: 0.5em 0.5em 0.5em 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+    .left img {
+        /*    make image circular and fit inside container*/
+        border-radius: 50%;
+        width: 100%;
+        object-fit: cover;
+        /* horizontally and vertically align in center */
+        margin: 0 auto;
+
+    }
+    p {
+        font-family: 'JetBrains Mono', monospace;
+        color: rgb(253, 255, 255);
+        font-size: 20px;
+        flex: 1;
+    }
+    body {
+        background-color: rgb(25, 25, 25);
+        font-size:16px;
+    }
+    h1 {
+        font-family: 'Share Tech Mono', monospace;
+        color:rgb(203, 114, 34);
+        font-size:45px;
+        margin: 0;
+    }
+
+    small {
+        font-family: 'JetBrains mono', monospace;
+        color: rgb(224, 66, 66);
+        font-size:18px;
+    }
+</style>
+
+
+<body>
+  <div class="container">
+      <div class="left">
+          <img src="https://deloughry.co.uk/images/me.jpg"  alt=""/>
+      </div>
+      <div class='right'>
+          <h1>{title}</h1>
+          <p>{description}</p>
+          <small>By {author}</small>
+      </div>
+  </div>
+</body>

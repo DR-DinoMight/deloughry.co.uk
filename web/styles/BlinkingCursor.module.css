@@ -1,0 +1,12 @@
+.blinkingCursor {
+    animation: 1s blink ease-in-out infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

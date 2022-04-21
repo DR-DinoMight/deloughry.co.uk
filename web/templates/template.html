@@ -1,0 +1,61 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+
+<style>
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .left {
+        /* take up only 1/3 of the width of the container*/
+        width: 33%
+    }
+    .right {
+        /* take up only 2/3 of the width of the container*/
+        padding: 0.5em 0.5em 0.5em 2rem;
+    }
+    .left img {
+        /*    make image circular and fit inside container*/
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    * {
+        font-family: 'JetBrains Mono', monospace;
+        color: rgb(253, 255, 255)
+    }
+    body {
+        background-color: rgb(25, 25, 25);
+    }
+    h1 {
+        font-family: 'Share Tech Mono', monospace;
+        color:rgb(203, 114, 34);
+    }
+    small {
+        font-family: 'JetBrains mono', monospace;
+        color: rgb(224, 66, 66);
+        font-size:27px;
+
+    }
+</style>
+
+
+<body>
+  <div class="container">
+      <div class="left">
+          <img src="{authorImage}"  alt=""/>
+      </div>
+      <div class='right'>
+          <h1>{title}</h1>
+          <p>{description}</p>
+          <small>By {author}</small>
+      </div>
+  </div>
+</body>
