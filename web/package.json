@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mongodb-js/charts-embed-dom": "^2.2.0",
     "@netlify/functions": "^0.10.0",
     "@portabletext/react": "^1.0.2",
     "@sanity/client": "^3.0.3",

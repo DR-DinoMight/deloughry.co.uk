@@ -30,6 +30,7 @@ const setPageView = (pathName: string) => {
 
 };
 
+
 export {
   setPageView,
 };

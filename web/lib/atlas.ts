@@ -31,7 +31,6 @@ const upsertPageView = async (pageUrl : string ) => {
 }
 
 const getPageViewCount = async (pageUrl : string ) => {
-  console.log(pageUrl)
   const response = await fetch(`${dataUrl}/action/findOne`, {
     method: 'POST',
     headers: {
