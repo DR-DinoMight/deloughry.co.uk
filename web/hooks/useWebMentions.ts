@@ -2,10 +2,9 @@ import {useEffect, useState} from "react";
 
 export const useWebMentions = (url?: string) => {
   const [mentions, setMentions] = useState([]);
-  useEffect(() => {
-    console.log(`https://webmention.io/api/mentions.jf2?${process.env.WEBMENTION_USERNAME}&token=${process.env.WEBMENTION_TOKEN}`)
+  useEffect(() => {-
     fetch(
-      `https://webmention.io/api/mentions.jf2?${process.env.WEBMENTION_USERNAME}&token=${process.env.WEBMENTION_TOKEN}`
+      `https://webmention.io/api/mentions.jf2?deloughry.co.uk&token=bpZ72emNGYIKhE3iNJO4SA`
     )
       .then((response) => response.json())
       .then((result) => {
