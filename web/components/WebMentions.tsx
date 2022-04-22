@@ -9,13 +9,14 @@ export default function WebMentions({url, className}: {url?: string, className?:
       <p>
         This {url ? 'page' : 'site' } has been mentioned {webMentions.length} times.
       </p>
-      {webMentions.map((mention) => (
+      {webMentions.map((mention, index) => (
         <div
           style={{
             display: 'grid',
             gap: '1rem',
             gridTemplateColumns: '100px 1fr',
           }}
+          key={index}
         >
           <a href={mention.author.url}>
             <img
