@@ -40,7 +40,7 @@ const Stats: NextPage = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-xl font-medium text-purple mt-4">Mentions about my site around the web</h3>
+        <h3 className="text-xl font-medium text-purple mt-8">Mentions about my site around the web</h3>
         <div className="flex flex-col">
           <WebMentions />
         </div>
