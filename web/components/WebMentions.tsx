@@ -37,7 +37,8 @@ export default function WebMentions({url, className}: {url?: string, className?:
           </span>
           <ul className="flex flex-row ">
             {webMentions.reposts.map((like, index) => (
-              <li className="mr-2" key={index}><a target="_blank" rel="noopener noreferrer" href={like.author.url} title={like.author.name}><img src={like.author.photo}
+              <li className="mr-2" key={index}>
+                  <a target="_blank" rel="noopener noreferrer" href={like.author.url} title={like.author.name}><img src={like.author.photo}
                                                                                            alt={`Avatar for ${like.author.name}`}
                                                                                            className={'rounded-full w-10 h-10  border-2 border-terminal-green'}/></a>
               </li>
@@ -61,10 +62,15 @@ export default function WebMentions({url, className}: {url?: string, className?:
                     month: 'short',
                     day: 'numeric',
                   })}</time></p>
+
+                   <a href={mention.url} className="text-xs italic text-purple ml-4 self-center" target="_blank" rel="noopener noreferrer" title="Original Source">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                  </a>
                 </span>
                 <div>
                   {mention.content ? <p className={'mb-6'}>"{mention.content.text}"</p> : null}
-                  {!url ? (<small className={'text-xs text-purple'}>..about the page <a target="_blank" rel="noopener noreferrer" href={mention['wm-target']}>{stripDomainFromString(mention['wm-target'])}</a></small>) : null}
+
+                  {!url ? (<small className={'text-xs text-purple italic'}>..about the page <a target="_blank" rel="noopener noreferrer" href={mention['wm-target']}>{stripDomainFromString(mention['wm-target'])}</a></small>) : null}
                 </div>
               </li>
             ))}
