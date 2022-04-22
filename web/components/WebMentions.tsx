@@ -23,7 +23,7 @@ export default function WebMentions({url, className}: {url?: string, className?:
             </span>
             <ul className="flex flex-row ">
               {webMentions.likes.map((like, index) => (
-                <li className="mr-2" key={index}><a href={like.author.url} title={like.author.name}><img src={like.author.photo} alt={`Avatar for ${like.author.name}`} className={'rounded-full w-10 h-10  border-2 border-red'}/></a></li>
+                <li className="mr-2" key={index}><a target="_blank" rel="noopener noreferrer" href={like.author.url} title={like.author.name}><img src={like.author.photo} alt={`Avatar for ${like.author.name}`} className={'rounded-full w-10 h-10  border-2 border-red'}/></a></li>
               ))}
             </ul>
           </div>
@@ -37,7 +37,7 @@ export default function WebMentions({url, className}: {url?: string, className?:
           </span>
           <ul className="flex flex-row ">
             {webMentions.reposts.map((like, index) => (
-              <li className="mr-2" key={index}><a href={like.author.url} title={like.author.name}><img src={like.author.photo}
+              <li className="mr-2" key={index}><a target="_blank" rel="noopener noreferrer" href={like.author.url} title={like.author.name}><img src={like.author.photo}
                                                                                            alt={`Avatar for ${like.author.name}`}
                                                                                            className={'rounded-full w-10 h-10  border-2 border-terminal-green'}/></a>
               </li>
@@ -51,12 +51,12 @@ export default function WebMentions({url, className}: {url?: string, className?:
             {webMentions.mentions.map((mention, index) => (
               <li key={index} className="px-4 py-5 bg-black-300 border-4 border-purple shadow rounded-lg overflow-hidden sm:p-6 transition-all duration-400">
                   <span className="flex flex-row items mb-6 align-middle item-center">
-                    <a href={mention.author.url} title={mention.author.name} target="_blank"><img
+                    <a target="_blank" rel="noopener noreferrer" href={mention.author.url} title={mention.author.name}><img
                       src={mention.author.photo} alt={`Avatar for ${mention.author.name}`}
                       className={'rounded-full w-10 h-10 border-2 border-purple'}/></a>
                   <p
                     className="ml-2 self-center">
-                      <a href={mention.author.url} title={mention.author.name}>{mention.author.name}</a> {mentionTypes[mention['wm-property']]} on <time className="font-bold">{new Date(mention.published).toLocaleDateString(undefined, {
+                      <a target="_blank" rel="noopener noreferrer" href={mention.author.url} title={mention.author.name}>{mention.author.name}</a> {mentionTypes[mention['wm-property']]} on <time className="font-bold">{new Date(mention.published).toLocaleDateString(undefined, {
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric',
@@ -64,7 +64,7 @@ export default function WebMentions({url, className}: {url?: string, className?:
                 </span>
                 <div>
                   {mention.content ? <p className={'mb-6'}>"{mention.content.text}"</p> : null}
-                  {!url ? (<small className={'text-xs text-purple'}>..about the page <a href={mention['wm-target']}>{stripDomainFromString(mention['wm-target'])}</a></small>) : null}
+                  {!url ? (<small className={'text-xs text-purple'}>..about the page <a target="_blank" rel="noopener noreferrer" href={mention['wm-target']}>{stripDomainFromString(mention['wm-target'])}</a></small>) : null}
                 </div>
               </li>
             ))}
