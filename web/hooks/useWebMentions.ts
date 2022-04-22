@@ -27,7 +27,6 @@ export const useWebMentions= (url?: string) : WebMentionsTypes => {
               reposts: totalRepost,
               mentions: mentionsWithoutLikeOrReposts
             };
-          console.log(webMentions);
           setMentions(webMentions);
         }
       });
