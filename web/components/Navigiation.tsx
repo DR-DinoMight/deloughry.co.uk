@@ -52,7 +52,7 @@ const Navigation: NextPage = () => {
           </div>
           <div className="hidden ml-10 space-x-4 lg:flex align-middle items-center space-x-4 ">
             {links.social.map((item) => (
-              <a key={item.name} href={item.href} className="hover:border-0 hover:text-yellow-500 hover:bg-transparent no-underline hover:no-underline">
+              <a key={item.name} href={item.href} className="hover:border-0 hover:text-yellow-500 hover:bg-transparent no-underline hover:no-underline" rel={item.rel}>
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" />
               </a>

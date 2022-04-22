@@ -20,6 +20,7 @@ const links = {
       icon: () => (
         <GithubLogo />
       ),
+      rel: 'me'
     },
     {
       name: 'Twitter',
@@ -27,6 +28,7 @@ const links = {
       icon: () => (
         <TwitterLogo />
       ),
+      rel: 'me'
     },
     {
       name: 'Twitch',
@@ -34,6 +36,7 @@ const links = {
       icon: () => (
         <TwitchLogo />
       ),
+      rel: 'me'
     },
     {
       name: 'The Claw Discord',
@@ -41,6 +44,7 @@ const links = {
       icon: () => (
         <MothLogo />
       ),
+      rel: ''
     },
   ],
 }
