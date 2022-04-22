@@ -13,6 +13,8 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=JetBrains+Mono&display=swap"
                 rel="stylesheet"/>
+          <link rel="webmention" href="https://webmention.io/deloughry.co.uk/webmention" />
+          <link rel="pingback" href="https://webmention.io/deloughry.co.uk/xmlrpc" />
         </Head>
         <body>
           <Main/>

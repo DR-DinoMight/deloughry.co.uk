@@ -10,6 +10,7 @@ import LogViews from "../components/Website/LogViews";
 import PageViews from "../components/Website/PageViews";
 import LastPageViewed from "../components/Website/LastPageViewed";
 import TotalPageViews from "../components/Website/TotallPageViews";
+import WebMentions from "../components/WebMentions";
 
 const Stats: NextPage = () => {
   return (
@@ -36,6 +37,12 @@ const Stats: NextPage = () => {
           <PageViews />
           <LastPageViewed />
           <TotalPageViews />
+        </div>
+      </div>
+      <div>
+        <h3 className="text-xl font-medium text-red mt-4">Web mentions</h3>
+        <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-2">
+          <WebMentions />
         </div>
       </div>
     </>
