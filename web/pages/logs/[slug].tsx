@@ -7,6 +7,7 @@ import {formatPublishedDateForDateTime, formatPublishedDateForDisplay} from "../
 import Head from 'next/head'
 import PageViews from "../../components/PageViews";
 import {useRouter} from 'next/router'
+import WebMentions from "../../components/WebMentions";
 
 const LogPost = (props) => {
   const router = useRouter();
@@ -22,6 +23,7 @@ const LogPost = (props) => {
     headerImage = null,
     slug = null,
   } = props.logPost
+  console.log(router);
   return (
     <>
       <Head>
@@ -33,7 +35,7 @@ const LogPost = (props) => {
         <meta name="twitter:creator" content="@Dr_DinoMight" key="twhandle"/>
 
         {/* Open Graph */}
-        <meta property="og:url" content={router.basePath} key="ogurl"/>
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_SITE_NAME}${router.basePath}`} key="ogurl"/>
         <meta property="og:image"
               content={`https://deloughry.co.uk/.netlify/functions/og/template=template/title=${title}/description=${process.env.NEXT_PUBLIC_SITE_NAME} /author=${name}`}
               key="ogimage"/>
@@ -72,6 +74,12 @@ const LogPost = (props) => {
           />
 
       </article>
+      <div>
+        <h3 className="text-xl font-medium text-purple mt-4">Mentions about this page from around the web</h3>
+        <div className="flex flex-col">
+          <WebMentions url={`${process.env.NEXT_PUBLIC_SITE_NAME}${router.basePath}`} />
+        </div>
+      </div>
     </>
   )
 }

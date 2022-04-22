@@ -63,3 +63,8 @@ export const PtComponents: PortableTextComponents = {
 export const urlFor =  (source: SanityImageSource) => {
   return imageUrlBuilder(client).image(source)
 }
+
+// Grab the path from the url string
+export const stripDomainFromString = (url: string) => {
+  return url.replace(/^https?:\/\/[^\/]+/, '')
+}

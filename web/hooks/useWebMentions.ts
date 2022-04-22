@@ -1,23 +1,35 @@
 import {useEffect, useState} from "react";
 
-export const useWebMentions = (url?: string) => {
-  const [mentions, setMentions] = useState([]);
-  useEffect(() => {-
+export type WebMentionsTypes = {
+  likes: any,
+  reposts: any,
+  mentions: any
+}
+
+export const useWebMentions= (url?: string) : WebMentionsTypes => {
+  const [mentions, setMentions] = useState<WebMentionsTypes| undefined>(undefined);
+  useEffect(() => {
+    const wmUrl = 'https://webmention.io/api/mentions.jf2?deloughry.co.uk&token=bpZ72emNGYIKhE3iNJO4SA';
+    const target = url ? `${wmUrl}&target=${url}` : wmUrl
     fetch(
-      `https://webmention.io/api/mentions.jf2?deloughry.co.uk&token=bpZ72emNGYIKhE3iNJO4SA`
+      target
     )
       .then((response) => response.json())
-      .then((result) => {
-        let filtered = [];
-        if (result && result.children) {
-         filtered = result.children.filter((mention) => {
-          if (url) {
-            return mention['wm-target'] === url;
-          }
-          return true;
-        });
-      }
-        setMentions(filtered);
+      .then((mentions) => {
+        if (mentions.children) {
+          const mentionsWithoutLikeOrReposts = mentions.children.filter((mention) => mention['wm-property'] !== 'like-of' && mention['wm-property'] !== 'repost-of');
+          const totalLike = mentions.children.filter((mention) => mention['wm-property'] === 'like-of');
+          const totalRepost = mentions.children.filter((mention) => mention['wm-property'] === 'repost-of');
+
+          const webMentions: WebMentionsTypes =
+            {
+              likes: totalLike,
+              reposts: totalRepost,
+              mentions: mentionsWithoutLikeOrReposts
+            };
+          console.log(webMentions);
+          setMentions(webMentions);
+        }
       });
   }, []);
 
