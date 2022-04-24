@@ -1,8 +1,8 @@
-import {useWebMentions, WebMentionsTypes} from "../hooks/useWebMentions";
+import {useWebMentions, WebMentionsCollection} from "../hooks/useWebMentions";
 import {stripDomainFromString} from "../helpers/TextHelpers";
 
 export default function WebMentions({url, className}: {url?: string, className?: string}) {
-  const webMentions : WebMentionsTypes = useWebMentions(url);
+  const webMentions : WebMentionsCollection = useWebMentions(url);
 
   const mentionTypes = {
     'in-reply-to': 'Replied',

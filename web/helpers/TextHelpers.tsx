@@ -39,7 +39,7 @@ export const PtComponents: PortableTextComponents = {
   },
   block: {
     blockquote: ({children}) => <blockquote className="border-terminal-green text-sm bg-black border-l-8 p-8 m-6 text-terminal-green italic text-white">{children}</blockquote>,
-    h2: ({children}) => <h2 className="text-3xl font-bold">{children}</h2>,
+    h2: ({children}) => <h2 className="text-3xl font-bold py-2 text-terminal-green">{children}</h2>,
     h3: ({children}) => <h3 className="text-2xl font-bold py-2 text-terminal-green">{children}</h3>,
   },
   list: {
