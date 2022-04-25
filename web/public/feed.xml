@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+    <rss version="2.0" 
+      xmlns:atom="http://www.w3.org/2005/Atom">
+      <channel>
+        <title>Deloughry.co.uk</title>
+        <link>https://deloughry.co.uk</link>
+        <atom:link 
+          href="https://https://deloughry.co.uk/feed.xml" 
+          rel="self" 
+          type="application/rss+xml" />
+        <description>Developer. Streamer. Tweeter. &amp; a little bit of everything Nerdy!_</description>
+        
+      <item>
+        <title>Integrating Webmentions with Next.JS</title>
+        <description>I recently read about Webmentions and suddenly was hit with a major case of nostalgia for the days of pingbacks and the days of seeing the long list of likes, shares and reposts on Tumblr (Yes! I was one of those angsty teenagers 😛), and I had to implement!</description>
+        <link>https://deloughry.co.uk/logs/integrating-webmentions-with-next-js</link>
+        <guid>https://deloughry.co.uk/logs/integrating-webmentions-with-next-js</guid>
+        <pubDate>Sun, 24 Apr 2022 12:03:00 BST</pubDate>
+      </item>
+    
+      <item>
+        <title>Using MongoDB’s Data API, Next.js with SWR to make a page click tracker.</title>
+        <description>With a new website build, I wanted to gain some knowledge of what traffic was like on my website, more importantly, my “Logs”, as these are posts that are a mix of both short and long forms of posts I just wanted to see which of these posts were doing better or worse</description>
+        <link>https://deloughry.co.uk/logs/using-mongodb-s-data-api-next-js-with-swr-to-make-a-page-click-tracker</link>
+        <guid>https://deloughry.co.uk/logs/using-mongodb-s-data-api-next-js-with-swr-to-make-a-page-click-tracker</guid>
+        <pubDate>Wed, 20 Apr 2022 09:26:00 BST</pubDate>
+      </item>
+    
+      <item>
+        <title>Work in Progress</title>
+        <description>I am a big believer in striking while the iron is hot, and personal projects are no exception! So today I've deployed the new look website, but it is still very much a WIP.</description>
+        <link>https://deloughry.co.uk/logs/work-in-progress</link>
+        <guid>https://deloughry.co.uk/logs/work-in-progress</guid>
+        <pubDate>Sun, 13 Feb 2022 21:29:00 GMT</pubDate>
+      </item>
+    
+      <item>
+        <title>It has to change! Shape up! Do Better!</title>
+        <description>Straight off the bat, DON'T EVER think it's acceptable to fire misogynistic, racial or even for that matter general abuse at another person no matter the person!</description>
+        <link>https://deloughry.co.uk/logs/it-has-to-change-shape-up-do-better</link>
+        <guid>https://deloughry.co.uk/logs/it-has-to-change-shape-up-do-better</guid>
+        <pubDate>Thu, 20 May 2021 12:33:00 BST</pubDate>
+      </item>
+    
+    </channel>
+    </rss>

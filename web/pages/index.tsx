@@ -32,11 +32,6 @@ export default Home
 
 
 export async function getStaticProps() {
-  console.log(client)
-  const logCount = await client.fetch(
-    groq`*[_type == "logPost"] | count`
-  );
-
   const logs = await client.fetch(groq`
     *[_type == "logPost" && publishedAt < now()][0..2] | order(publishedAt desc) {
       title,

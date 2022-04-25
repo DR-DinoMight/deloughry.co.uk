@@ -63,8 +63,8 @@ const LogList = (
       <h2 className="text-3xl"><span className='text-red'>/var/logs</span> <span
         className='text-white'>$ cat {selectCategory}.log &gt; list<BlinkingCursor cursor={'_'}/></span></h2>
       <div className="my-6 grid gap-8 lg:grid-cols-3 lg:gap-x-10">
-        {logs.map((log) => {
-          return <LogItem key={log.id} log={log}/>
+        {logs.map((log, index) => {
+          return <LogItem key={index} log={log}/>
         })}
       </div>
       <Link href="/logs/">
