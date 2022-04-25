@@ -15,6 +15,12 @@ class MyDocument extends Document {
                 rel="stylesheet"/>
           <link rel="webmention" href="https://webmention.io/deloughry.co.uk/webmention" />
           <link rel="pingback" href="https://webmention.io/deloughry.co.uk/xmlrpc" />
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS Feed for deloughry.co.uk"
+            href="https://deloughry.co.uk/feed.xml"
+          />
         </Head>
         <body>
           <Main/>
