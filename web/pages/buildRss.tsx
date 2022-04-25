@@ -52,7 +52,7 @@ export async function getStaticProps() {
         <title>Deloughry.co.uk</title>
         <link>${domain}</link>
         <atom:link 
-          href="https://${domain}/feed.xml" 
+          href="${domain}/feed.xml" 
           rel="self" 
           type="application/rss+xml" />
         <description>Developer. Streamer. Tweeter. &amp; a little bit of everything Nerdy!_</description>
