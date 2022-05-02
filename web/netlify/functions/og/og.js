@@ -1,6 +1,8 @@
 const chromium = require("chrome-aws-lambda");
 const { builder } = require("@netlify/functions");
 const fs = require("fs").promises;
+
+
 exports.handler = builder(async function (event, context) {
   const { template, ...params } = Object.fromEntries(
       event.path

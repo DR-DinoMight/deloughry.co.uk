@@ -1,0 +1,53 @@
+[
+    {
+        "srcLink": "https://deloughry.co.uk/logs/integrating-webmentions-with-next-js",
+        "referencedLinks": [
+            {
+                "url": "https://www.w3.org/tr/webmention",
+                "status": "no webmention endpoint found",
+                "dateAttempted": "2022-05-02T19:16:58.510Z",
+                "dateProcessed": "2022-05-02T19:16:59.471Z"
+            },
+            {
+                "url": "https://aboutmonica.com/blog/getting-started-with-webmention-next-js",
+                "status": "success",
+                "dateAttempted": "2022-05-02T19:16:58.510Z",
+                "webmentionLink": "https://webmention.io/www.aboutmonica.com/webmention",
+                "dateProcessed": "2022-05-02T19:16:59.818Z"
+            },
+            {
+                "url": "https://aboutmonica.com",
+                "status": "success",
+                "dateAttempted": "2022-05-02T19:16:58.510Z",
+                "webmentionLink": "https://webmention.io/www.aboutmonica.com/webmention",
+                "dateProcessed": "2022-05-02T19:17:00.025Z"
+            },
+            {
+                "url": "https://www.learnwithjason.dev/webmention-next-js",
+                "status": "no webmention endpoint found",
+                "dateAttempted": "2022-05-02T19:16:58.510Z",
+                "dateProcessed": "2022-05-02T19:17:00.435Z"
+            },
+            {
+                "url": "https://webmention.io",
+                "status": "success",
+                "dateAttempted": "2022-05-02T19:16:58.510Z",
+                "webmentionLink": "https://webmention.io/pingback/webmention",
+                "dateProcessed": "2022-05-02T19:17:00.757Z"
+            },
+            {
+                "url": "https://brid.gy",
+                "status": "no webmention endpoint found",
+                "dateAttempted": "2022-05-02T19:16:58.510Z",
+                "dateProcessed": "2022-05-02T19:17:00.907Z"
+            },
+            {
+                "url": "https://webmentions.io",
+                "status": "ERROR",
+                "dateAttempted": "2022-05-02T19:16:58.510Z",
+                "dateProcessed": "2022-05-02T19:17:00.927Z"
+            }
+        ],
+        "dateAttempted": "2022-05-02T19:17:00.927Z"
+    }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "webmention-sender",
+  "version": "1.0.0",
+  "description": "A serverless function to run manually or on deploy that will search through and send web mentions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Peck-Deloughry",
+  "license": "ISC",
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+
+  }
+}
