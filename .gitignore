@@ -40,3 +40,4 @@ web/.env
 # Local Netlify folder
 .netlify
 web/.env
+.idea
