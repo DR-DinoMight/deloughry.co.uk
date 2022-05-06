@@ -3,9 +3,9 @@ import BlinkingCursor from "./BlnkingCursor";
 
 const Header = () => {
   return (
-    <div className='flex mb-12'>
-      <div className='mr-20 flex flex-column align-middle hidden md:block'>
-        <Image src="/images/me.jpg" alt="Me" width={300} height={300} layout='fixed' className='rounded-full'/>
+    <div className='flex mb-12 md:flex-row md:gap-6 flex-col'>
+      <div className='md:mb-0 mb-6 align-middle justify-center' >
+        <Image src="/images/me.jpg" alt="Me" width={300} height={300} layout='fixed' className='rounded-lg'/>
       </div>
       <h1 className='text-4xl md:text-6xl'>
         <span className='text-orange-600'>Developer.</span><br/><span
