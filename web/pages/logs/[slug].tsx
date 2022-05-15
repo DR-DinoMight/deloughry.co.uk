@@ -8,6 +8,8 @@ import Head from 'next/head'
 import PageViews from "../../components/PageViews";
 import {useRouter} from 'next/router'
 import WebMentions from "../../components/WebMentions";
+import {buildQueryString} from "../../lib/url-helpers";
+import {OgQueryParams} from "../../types/OgQueryParams";
 
 const LogPost = (props) => {
   const router = useRouter();
@@ -22,6 +24,7 @@ const LogPost = (props) => {
     timeSincePublished = '',
     headerImage = null,
     slug = null,
+    ogImage = null,
   } = props.logPost
   return (
     <>
@@ -32,11 +35,15 @@ const LogPost = (props) => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary" key="twcard"/>
         <meta name="twitter:creator" content="@Dr_DinoMight" key="twhandle"/>
+        <meta name="twitter:title" content={title} key="twtitle"/>
+        <meta name="twitter:description" content={description} key="twdescription"/>
+        <meta name="twitter:image" content={ogImage} key="twimage"/>
+        {/* Open Graph */}
 
         {/* Open Graph */}
         <meta property="og:url" content={`https://deloughry.co.uk${router.asPath}`} key="ogurl"/>
         <meta property="og:image"
-              content={`https://deloughry.co.uk/.netlify/functions/og/template=template/title=${title}/description=${process.env.NEXT_PUBLIC_SITE_NAME} /author=${name}`}
+              content={ogImage}
               key="ogimage"/>
         <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME} key="ogsitename"/>
         <meta property="og:title" content={title} key="ogtitle"/>
@@ -129,9 +136,18 @@ export async function getStaticProps(context: any) {
     {slug}
   )
 
+  const ogImageParams: OgQueryParams = {
+    title: logPost.title,
+    category: logPost.category,
+    publishedOn: new Date(logPost.publishedAt).toLocaleString(),
+  }
+  const { ogImage } = await fetch(`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(ogImageParams)}`).then(res => res.json());
+
+
   return {
     props: {
       logPost,
+      ogImage
     },
   }
 }
