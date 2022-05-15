@@ -47,7 +47,8 @@ export default function WebMentions({url, className}: {url?: string, className?:
           </div>
         </div>
         <div className={'mt-6'}>
-          <h4 className={'flex flex-row'}><svg className="w-6 h-6 mr-2 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg> Mentions</h4>
+          <h4 className={'flex flex-row'}>
+            <svg className="w-6 h-6 mr-2 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg> Mentions</h4>
           <ul className={'flex flex-col mt-4 '}>
             {webMentions.mentions.map((mention, index) => (
               <li key={index} className="px-4 mb-4 py-5 bg-black-300 border-4 border-purple shadow rounded-lg overflow-hidden sm:p-6 transition-all duration-400">
