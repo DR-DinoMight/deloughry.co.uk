@@ -137,8 +137,9 @@ export async function getStaticProps(context: any) {
 
   const ogImageParams: OgQueryParams = {
     title: logPost.title,
-    category: logPost.category,
-    publishedOn: new Date(logPost.publishedAt).toLocaleString(),
+    category: logPost.category.name,
+    categoryColor: logPost.category.textColor,
+    publishedOn: new Date(logPost.publishedAt).toLocaleDateString(),
   }
   // const ogImage = await fetch(`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(ogImageParams)}`);
   // const ogImage = `https://deloughry.co.uk/images/me.jpg`;
