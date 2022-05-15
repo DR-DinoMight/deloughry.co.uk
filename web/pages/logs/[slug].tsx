@@ -141,9 +141,10 @@ export async function getStaticProps(context: any) {
     category: logPost.category,
     publishedOn: new Date(logPost.publishedAt).toLocaleString(),
   }
-  const { buffer : ogImage } = await fetch(`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(ogImageParams)}`).then(res => res.json());
+  const ogImage = await fetch(`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(ogImageParams)}`)
+      .then(res => res.text());
   // const ogImage = `https://deloughry.co.uk/images/me.jpg`;
-
+  console.log(ogImage);
   return {
     props: {
       logPost,

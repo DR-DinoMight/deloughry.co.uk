@@ -25,10 +25,12 @@ const generateOGImage = async ({ title = 'deloughry.co.uk', publishedOn, image, 
 };
 
 exports.handler = async function ({ queryStringParameters }: { queryStringParameters }) {
-  const buffer = await generateOGImage( queryStringParameters);
-
   return {
     statusCode: 200,
-    body: JSON.stringify({ buffer })
+    headers: {
+      "Content-Type": "image/jpg",
+    },
+    body: await generateOGImage( queryStringParameters),
+    isBase64Encoded: true,
   };
 };
