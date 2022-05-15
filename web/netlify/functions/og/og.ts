@@ -8,7 +8,7 @@ const fs = require("fs").promises;
 const generateQueryString = (query: { [key: string]: string | string[] | number | undefined | null }) => encodeURI(Object.keys(query)
     .reduce((acc, cur, index) => query[cur] ? `${acc}${index === 0 ? '' : '&'}${cur}=${query[cur]}` : acc, '?'));
 
-const generateOGImage = async ({ title = 'deloughry.co.uk', publishedOn, image, likes, comments, shares, category, categoryColor }) => {
+const generateOGImage = async ({ title, publishedOn, image, likes, comments, shares, category, categoryColor }) => {
   const browser = await chromium.puppeteer.launch({
     args: chromium.args,
     executablePath: await chromium.executablePath,

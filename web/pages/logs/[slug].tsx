@@ -24,7 +24,6 @@ const LogPost = (props) => {
     timeSincePublished = '',
     headerImage = null,
     slug = null,
-    ogImage = null,
   } = props.logPost
   return (
     <>
@@ -37,13 +36,13 @@ const LogPost = (props) => {
         <meta name="twitter:creator" content="@Dr_DinoMight" key="twhandle"/>
         <meta name="twitter:title" content={title} key="twtitle"/>
         <meta name="twitter:description" content={description} key="twdescription"/>
-        <meta name="twitter:image" content={ogImage} key="twimage"/>
+        <meta name="twitter:image" content={props.ogImage} key="twimage"/>
         {/* Open Graph */}
 
         {/* Open Graph */}
         <meta property="og:url" content={`https://deloughry.co.uk${router.asPath}`} key="ogurl"/>
         <meta property="og:image"
-              content={ogImage}
+              content={props.ogImage}
               key="ogimage"/>
         <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME} key="ogsitename"/>
         <meta property="og:title" content={title} key="ogtitle"/>
