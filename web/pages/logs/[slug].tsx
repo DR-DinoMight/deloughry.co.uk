@@ -37,14 +37,14 @@ const LogPost = (props) => {
         <meta name="twitter:creator" content="@Dr_DinoMight" key="twhandle"/>
         <meta name="twitter:title" content={title} key="twtitle"/>
         <meta name="twitter:description" content={description} key="twdescription"/>
-        {/*<meta name="twitter:image" content={ogImage} key="twimage"/>*/}
+        <meta name="twitter:image" content={ogImage} key="twimage"/>
         {/* Open Graph */}
 
         {/* Open Graph */}
         <meta property="og:url" content={`https://deloughry.co.uk${router.asPath}`} key="ogurl"/>
-        {/*<meta property="og:image"*/}
-        {/*      content={ogImage}*/}
-        {/*      key="ogimage"/>*/}
+        <meta property="og:image"
+              content={ogImage}
+              key="ogimage"/>
         <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME} key="ogsitename"/>
         <meta property="og:title" content={title} key="ogtitle"/>
         <meta property="og:description" content={description} key="ogdesc"/>
@@ -141,13 +141,13 @@ export async function getStaticProps(context: any) {
     category: logPost.category,
     publishedOn: new Date(logPost.publishedAt).toLocaleString(),
   }
-  // const { ogImage } = await fetch(`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(ogImageParams)}`).then(res => res.json());
-
+  const { buffer : ogImage } = await fetch(`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(ogImageParams)}`).then(res => res.json());
+  // const ogImage = `https://deloughry.co.uk/images/me.jpg`;
 
   return {
     props: {
       logPost,
-      // ogImage
+      ogImage
     },
   }
 }
