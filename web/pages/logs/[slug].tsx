@@ -32,7 +32,7 @@ const LogPost = (props) => {
         <meta name="author" content={name}/>
         <meta name="description" content={description}/>
         {/* Twitter */}
-        <meta name="twitter:card" content="summary" key="twcard"/>
+        <meta name="twitter:card" content="summary_large" key="twcard"/>
         <meta name="twitter:creator" content="@Dr_DinoMight" key="twhandle"/>
         <meta name="twitter:title" content={title} key="twtitle"/>
         <meta name="twitter:description" content={description} key="twdescription"/>
@@ -137,8 +137,8 @@ export async function getStaticProps(context: any) {
 
   const ogImageParams: OgQueryParams = {
     title: logPost.title,
-    category: logPost.category.name,
-    categoryColor: logPost.category.textColor,
+    category: logPost.category?.title ?? '',
+    categoryColor: logPost.category?.textColor ?? '',
     publishedOn: new Date(logPost.publishedAt).toLocaleDateString(),
   }
   // const ogImage = await fetch(`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(ogImageParams)}`);
