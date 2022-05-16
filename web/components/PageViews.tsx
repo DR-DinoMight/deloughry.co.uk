@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+import {fetcher} from "../lib/fetcher";
 
 export default function PageViews({url, className}: {url?: string, className?: string}) {
   const router = useRouter();

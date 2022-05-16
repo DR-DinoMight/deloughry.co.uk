@@ -21,8 +21,6 @@ const LogPost = (props) => {
     authorImage,
     body = [],
     publishedAt = '',
-    timeSincePublished = '',
-    headerImage = null,
     slug = null,
   } = props.logPost
   return (
@@ -32,7 +30,7 @@ const LogPost = (props) => {
         <meta name="author" content={name}/>
         <meta name="description" content={description}/>
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large" key="twcard"/>
+        <meta name="twitter:card" content="summary_large_image" key="twcard"/>
         <meta name="twitter:creator" content="@Dr_DinoMight" key="twhandle"/>
         <meta name="twitter:title" content={title} key="twtitle"/>
         <meta name="twitter:description" content={description} key="twdescription"/>
@@ -44,7 +42,10 @@ const LogPost = (props) => {
         <meta property="og:image"
               content={`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(props.ogImageParams)}`}
               key="ogimage"/>
+        <meta property="og:locale" content="en_GB" key="oglocale"/>
         <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME} key="ogsitename"/>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
         <meta property="og:title" content={title} key="ogtitle"/>
         <meta property="og:description" content={description} key="ogdesc"/>
       </Head>

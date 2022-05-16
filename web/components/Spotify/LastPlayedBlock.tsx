@@ -1,12 +1,8 @@
 import useSWR from 'swr';
-import {useEffect} from 'react';
-import {animate} from 'motion';
-
-import {NowPlayingSong, SpotifySong} from "../../lib/spotify";
-import BlinkingCursor from "../BlnkingCursor";
+import {SpotifySong} from "../../lib/spotify";
 import StatCard from "../StatCard";
+import {fetcher} from "../../lib/fetcher";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function LastPlayedBlock() {
   const {data} = useSWR<SpotifySong>('/api/spotify/last-played', fetcher);

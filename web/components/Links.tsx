@@ -2,7 +2,6 @@ import GithubLogo from "../components/Icons/GithubLogo";
 import TwitterLogo from "../components/Icons/TwitterLogo";
 import TwitchLogo from "../components/Icons/TwitchLogo";
 import MothLogo from "../components/Icons/MothLogo";
-import {useRouter} from "next/router";
 
 
 

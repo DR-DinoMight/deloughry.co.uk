@@ -1,8 +1,3 @@
-
-import TwitterLogo from "./Icons/TwitterLogo";
-import GithubLogo from "./Icons/GithubLogo";
-import TwitchLogo from "./Icons/TwitchLogo";
-import MothLogo from "./Icons/MothLogo";
 import Link from "next/link";
 import links from "./Links";
 

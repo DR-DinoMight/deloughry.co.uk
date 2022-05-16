@@ -1,11 +1,7 @@
 import {NextPage} from "next";
-import MothLogo from "./Icons/MothLogo";
-import TwitterLogo from "./Icons/TwitterLogo";
-import TwitchLogo from "./Icons/TwitchLogo";
 import {useEffect, useState} from "react";
 
 import styles from "../styles/Navigation.module.css";
-import GithubLogo from "./Icons/GithubLogo";
 import Link from "next/link";
 import links from "./Links";
 import {useRouter} from "next/router";

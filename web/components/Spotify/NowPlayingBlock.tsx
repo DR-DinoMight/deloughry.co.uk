@@ -1,12 +1,7 @@
 import useSWR from 'swr';
-import {useEffect} from 'react';
-import {animate} from 'motion';
-
 import {NowPlayingSong} from "../../lib/spotify";
-import BlinkingCursor from "../BlnkingCursor";
 import StatCard from "../StatCard";
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+import {fetcher} from "../../lib/fetcher";
 
 export default function NowPlayingBlock() {
   const {data} = useSWR<NowPlayingSong>('/api/spotify/now-playing', fetcher);
