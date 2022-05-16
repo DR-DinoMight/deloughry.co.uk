@@ -11,13 +11,14 @@ import PageViews from "../components/Website/PageViews";
 import LastPageViewed from "../components/Website/LastPageViewed";
 import TotalPageViews from "../components/Website/TotallPageViews";
 import WebMentions from "../components/WebMentions";
+import OpenGraph from "../components/OpenGraph";
 
 const Stats: NextPage = () => {
   return (
     <>
       <Head>
         <title>Stats | {process.env.NEXT_PUBLIC_SITE_NAME}</title>
-
+          <OpenGraph path={'/stats'} ogImageParams={{title: "Random Stats a dive into data"}}/>
       </Head>
       <h2 className="text-3xl"><span className='text-red'>~/stats</span> <span
         className='text-white'>$ list <BlinkingCursor cursor={'_'}/></span></h2>

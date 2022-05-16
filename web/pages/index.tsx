@@ -7,6 +7,7 @@ import WhoAmI from "../components/WhoAmI";
 import NowPlaying from "../components/Spotify/NowPlaying";
 import client from '../lib/sanity'
 import groq from "groq";
+import OpenGraph from "../components/OpenGraph";
 
 // @ts-ignore
 const Home: NextPage = ({logs}) => {
@@ -16,6 +17,7 @@ const Home: NextPage = ({logs}) => {
       <Head>
         <title>Passionately Nerdy - {process.env.NEXT_PUBLIC_SITE_NAME}</title>
         <meta name="description" content="A home for the nerdy"/>
+        <OpenGraph path={'/'} ogImageParams={{}}/>
       </Head>
       <Header />
       <div>

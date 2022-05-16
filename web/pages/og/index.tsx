@@ -18,8 +18,8 @@ const Index = () => {
 
 
   return (
-    <div className="flex items-center justify-between h-screen m-auto gap-4 mx-6" >
-      <div className='flex' >
+    <div className="flex items-center justify-between h-screen m-auto gap-4 mx-20" >
+      <div className='flex'>
         <Image src={image ?? "/images/me.jpg"} alt="Me" width={300} height={300} layout='fixed' className='rounded-lg'/>
       </div>
       <div className='w-3/4 flex flex-col'>
@@ -33,7 +33,7 @@ const Index = () => {
           ) }
           {title}_
         </h1>
-        <ul className="flex w-full justify-between mt-4 text-xl items-center">
+        <ul className="flex w-full justify-between mt-10 text-3xl items-center">
           {category && <li className={(categoryColor ?? 'text-terminal-green' )}><span className='text-white'>In:</span> {category}</li>}
           {publishedOn && (<li className='text-terminal-green'>On: <span className="text-white">{publishedOn}</span></li>) }
           <li className={(likes && likes > 0) ? "flex justify-center items-center gap-2" : "hidden"}>

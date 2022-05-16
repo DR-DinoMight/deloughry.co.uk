@@ -5,11 +5,18 @@ import groq from "groq";
 import Link from 'next/link';
 import Head from 'next/head'
 import PageViews from "../../components/PageViews";
+import OpenGraph from "../../components/OpenGraph";
 
 const Logs  = ({logs}) => {
-
+  const ogParams = {
+    title: '(b)Logs',
+  }
   return (
     <>
+      <Head>
+        <title>(b)Logs | {process.env.NEXT_PUBLIC_SITE_NAME}</title>
+        <OpenGraph path={'/logs'} ogImageParams={ogParams}/>
+      </Head>
       <h2 className="text-3xl"><span className='text-red'>/var/logs</span> <span
         className='text-white'>$ ls -la <BlinkingCursor cursor={'_'}/></span></h2>
 

@@ -10,6 +10,7 @@ import {useRouter} from 'next/router'
 import WebMentions from "../../components/WebMentions";
 import {buildQueryString} from "../../lib/url-helpers";
 import {OgQueryParams} from "../../types/OgQueryParams";
+import OpenGraph from "../../components/OpenGraph";
 
 const LogPost = (props) => {
   const router = useRouter();
@@ -29,25 +30,8 @@ const LogPost = (props) => {
         <title>{title} | {process.env.NEXT_PUBLIC_SITE_NAME}</title>
         <meta name="author" content={name}/>
         <meta name="description" content={description}/>
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" key="twcard"/>
-        <meta name="twitter:creator" content="@Dr_DinoMight" key="twhandle"/>
-        <meta name="twitter:title" content={title} key="twtitle"/>
-        <meta name="twitter:description" content={description} key="twdescription"/>
-        <meta name="twitter:image" content={`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(props.ogImageParams)}`} key="twimage"/>
-        {/* Open Graph */}
-
-        {/* Open Graph */}
-        <meta property="og:url" content={`https://deloughry.co.uk${router.asPath}`} key="ogurl"/>
-        <meta property="og:image"
-              content={`https://deloughry.co.uk/.netlify/functions/og${buildQueryString(props.ogImageParams)}`}
-              key="ogimage"/>
-        <meta property="og:locale" content="en_GB" key="oglocale"/>
-        <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME} key="ogsitename"/>
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="600" />
-        <meta property="og:title" content={title} key="ogtitle"/>
-        <meta property="og:description" content={description} key="ogdesc"/>
+        <meta name="keywords" content={category}/>
+        <OpenGraph title={title} description={description} path={router.asPath} ogImageParams={props.ogImageParams}/>
       </Head>
       <article>
         <h2 className="text-3xl"><span className='text-red'>/var/logs</span> <span
