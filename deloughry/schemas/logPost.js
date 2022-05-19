@@ -68,6 +68,12 @@ export default {
                         {title: 'Quote', value: 'blockquote'}
                     ]
                 },
+
+                {
+                    type: "cloudinary.asset",
+                    name: "image",
+                    description: "This asset is served from Cloudinary",
+                },
                 {
                     type: 'image',
                     options: {

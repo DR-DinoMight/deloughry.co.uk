@@ -14,7 +14,8 @@
     "@sanity/desk-tool",
     "@sanity/vision",
     "@sanity/code-input",
-    "@sanity/production-preview"
+    "@sanity/production-preview",
+    "cloudinary"
   ],
   "env": {
     "development": {
