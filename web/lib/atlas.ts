@@ -1,4 +1,4 @@
-import {async} from "rxjs";
+
 import {ShortcutOptionsType} from "../types/ShortcutOptionsType";
 
 const dataUrl = process.env.ATLAS_DATA_URL

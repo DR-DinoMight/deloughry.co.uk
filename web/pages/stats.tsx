@@ -12,6 +12,7 @@ import LastPageViewed from "../components/Website/LastPageViewed";
 import TotalPageViews from "../components/Website/TotallPageViews";
 import WebMentions from "../components/WebMentions";
 import OpenGraph from "../components/OpenGraph";
+import Battery from "../components/Personal/Battery";
 
 const Stats: NextPage = () => {
   return (
@@ -22,6 +23,13 @@ const Stats: NextPage = () => {
       </Head>
       <h2 className="text-3xl"><span className='text-red'>~/stats</span> <span
         className='text-white'>$ list <BlinkingCursor cursor={'_'}/></span></h2>
+
+      <div>
+        <h3 className="text-xl font-medium text-blue mt-4">Personal Stats</h3>
+        <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-4">
+          <Battery/>
+        </div>
+      </div>
       <div>
         <h3 className="text-xl font-medium text-spotify mt-4">Spotify</h3>
         <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-2">
