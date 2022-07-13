@@ -1,8 +1,8 @@
-import * as LRU from 'lru-cache';
+import LRU from 'lru-cache';
 import {scalarOptions} from "yaml";
 import Int = scalarOptions.Int;
 
-const rateLimit =  (options : {interval: Number, uniqueTokenPerInterval: Number}) => {
+const rateLimit =  (options : {interval: number, uniqueTokenPerInterval: number}) => {
 
   const tokenCache = new LRU({
     max: options.uniqueTokenPerInterval,
