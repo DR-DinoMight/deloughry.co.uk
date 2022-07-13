@@ -17,6 +17,11 @@ const nextConfig = {
             permanent: true,
         },
     ],
+    experimental: {
+        images: {
+            allowFutureImage: true,
+        },
+    },
 }
 
 module.exports = nextConfig

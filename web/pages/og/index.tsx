@@ -1,5 +1,5 @@
 
-import Image from "next/image";
+import Image from "next/future/image";
 import {useRouter} from "next/router";
 import {OgQueryParams} from "../../types/OgQueryParams";
 
@@ -20,7 +20,7 @@ const Index = () => {
   return (
     <div className="flex items-center justify-between h-screen m-auto gap-4 mx-20" >
       <div className='flex'>
-        <Image src={image ?? "/images/me.jpg"} alt="Me" width={300} height={300} layout='fixed' className='rounded-lg'/>
+        <Image src={image ?? "/images/me.jpg"} alt="Me" width={300} height={300}  className='rounded-lg'/>
       </div>
       <div className='w-3/4 flex flex-col'>
         <h1 className='text-5xl leading-tight'>

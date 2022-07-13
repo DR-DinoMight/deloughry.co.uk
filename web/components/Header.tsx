@@ -1,12 +1,10 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import BlinkingCursor from "./BlnkingCursor";
 
 const Header = () => {
   return (
     <div className='flex mb-12 md:flex-row md:gap-6 flex-col'>
-      <div className='md:mb-0 mb-6 align-middle justify-center' >
-        <Image src="/images/me.jpg" alt="Me" width={300} height={300} layout='fixed' className='rounded-lg'/>
-      </div>
+      <Image src="/images/me.jpg" alt="Me" width={300} height={300} className='rounded-lg md:mb-0 mb-6 align-middle justify-center'/>
       <h1 className='text-4xl md:text-5xl'>
         <span className='text-orange-600'>Developer.</span><br/><span
         className='text-twitch'>Streamer.</span><br/><span className='text-twitter'>Tweeter.</span><br/>&amp; a
