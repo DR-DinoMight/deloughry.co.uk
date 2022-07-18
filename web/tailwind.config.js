@@ -26,6 +26,18 @@ module.exports = {
                 '3xs': '0.5rem',
                 '10xl': '5rem',
             },
+            animation: {
+                marquee: 'marquee 40s linear infinite',
+                marquee2: 'marquee2 40s linear infinite',
+                spinslow: 'spin 10s linear infinite;'
+              },
+              keyframes: {
+                marquee: {
+                  '0%': { transform: 'translateX(50%)' },
+                  '100%': { transform: 'translateX(-100%)' },
+                },
+
+              },
             colors: {
                 'twitch': '#6441a5',
                 'twitter': '#1DA1F2',
