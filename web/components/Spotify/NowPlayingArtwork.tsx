@@ -18,20 +18,23 @@ export default function NowPlayingArtwork() {
     }
     }, [data]);
 
+  const artworkStyle = {
+    backgroundImage: `url("${artwork}")`
+  }
 
   return (
     <div className="w-full h-screen relative overflow-hidden m-auto">
-      <div className={`${data?.isPlaying ? 'animate-spinslow' : ''} w-screen h-screen relative`}>
-        <img src={artwork} className={`m-auto border-white border-8 rounded-full row-span-full col-span-full object-fill h-full aspect-square object-fill`}/>
-
+      <div className={`duration-500 ease-in-out ${data?.isPlaying ? 'opacity-0' : 'blur-lg opacity-100'} top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-center items-center absolute inset-0 bg-cover bg-center z-0 border-white border-8 rounded-full h-screen aspect-square`} style={ artworkStyle}></div>
+      <div className={`animate-spinslow relative w-screen h-screen duration-1000 ease-in-out ${data?.isPlaying ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-center items-center absolute inset-0 bg-cover bg-center z-0 border-white border-8 rounded-full h-screen aspect-square " style={ artworkStyle}></div>
+        <div className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 justify-center items-center absolute w-[6%] aspect-square rounded-full bg-white"></div>
+        <div className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 justify-center items-center absolute w-[5%] aspect-square rounded-full bg-[#191919]"></div>
       </div>
-        {data?.isPlaying && (
-          <div className='bg-black/20 absolute top-1/2'>
-            <div className=" shadow-black drop-shadow-lg  rounded text-8xl  animate-marquee whitespace-nowrap">
+          <div className={`bg-black/20 absolute top-1/2 -translate-y-1/2 transition-all duration-1000 ease-in-out ${data?.isPlaying ? 'opacity-100' : 'opacity-0'}`}>
+            <div className=" shadow-black drop-shadow-lg  rounded text-8xl animate-marquee whitespace-nowrap">
               Now Playing: {data?.song?.name} - {data?.song?.artist}
             </div>
           </div>
-        )}
     </div>
   );
 }
