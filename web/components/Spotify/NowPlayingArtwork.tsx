@@ -8,13 +8,13 @@ import { useEffect, useState } from 'react';
 export default function NowPlayingArtwork() {
   const {data} = useSWR<NowPlayingSong>('/api/spotify/now-playing', fetcher, { refreshInterval: 5000 });
 
-  const [artwork, useArtwork ] = useState();
+  const [artwork, setArtwork ] = useState();
 
   //cache the artwork in state  so we can still display it when no longer playing
 
   useEffect(() => {
     if (data && data.isPlaying) {
-      useArtwork(data?.song?.albumArt[0]?.url)
+      setArtwork(data?.song?.albumArt[0]?.url)
     }
     }, [data]);
 
