@@ -27,8 +27,7 @@ module.exports = {
                 '10xl': '5rem',
             },
             animation: {
-                marquee: 'marquee 40s linear infinite',
-                marquee2: 'marquee2 40s linear infinite',
+                marquee: 'marquee 10s linear infinite',
                 spinslow: 'spin 10s linear infinite;'
               },
               keyframes: {
