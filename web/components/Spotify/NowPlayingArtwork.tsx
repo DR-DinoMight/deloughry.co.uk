@@ -24,7 +24,7 @@ export default function NowPlayingArtwork() {
 
   return (
     <div className="w-full h-screen relative overflow-hidden m-auto">
-      {artwork && (<div className={`duration-500 ease-in-out ${data?.isPlaying ? 'opacity-0' : 'blur-lg opacity-100 animate-spinslow'} top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-center items-center absolute inset-0 bg-cover bg-center z-0 border-white border-8 rounded-full h-screen aspect-square`} style={ artworkStyle}></div>)}
+      {artwork && (<div className={`duration-500 ease-in-out ${data?.isPlaying ? 'opacity-0' : 'blur-lg opacity-100'} top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-center items-center absolute inset-0 bg-cover bg-center z-0 border-white border-8 rounded-full h-screen aspect-square`} style={ artworkStyle}></div>)}
       <div className="h-full aspect-square left-1/2 relative -translate-x-1/2">
         <div className={`animate-spinslow relative h-full duration-1000 ease-in-out bg-black ${data?.isPlaying ? 'opacity-100' : 'opacity-0'} rounded-full border-black-50 border-8`}>
           <div className="inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute h-[96%] w-[96%] border-2 rounded-full border-black-300"></div>
