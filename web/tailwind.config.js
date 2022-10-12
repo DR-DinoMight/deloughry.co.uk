@@ -28,14 +28,19 @@ module.exports = {
             },
             animation: {
                 marquee: 'marquee 10s linear infinite',
-                spinslow: 'spin 10s linear infinite;'
+                spinslow: 'spin 10s linear infinite;',
+                fadein: 'fadein 1s linear',
+                fadeinslow: 'fadein 4s linear'
               },
               keyframes: {
                 marquee: {
                   '0%': { transform: 'translateX(50%)' },
                   '100%': { transform: 'translateX(-100%)' },
                 },
-
+                fadein: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 100}
+                }
               },
             colors: {
                 'twitch': '#6441a5',
