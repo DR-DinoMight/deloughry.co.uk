@@ -1,12 +1,12 @@
 
 import Image from "next/future/image";
 import {useRouter} from "next/router";
-import NowPlayingArtwork from "../components/Spotify/NowPlayingArtwork";
+import NowPlayingArtworkFull from "../components/Spotify/NowPlayingArtworkFull";
 
 const Index = () => {
   return (
     <div className="w-full h-screen" >
-        <NowPlayingArtwork />
+        <NowPlayingArtworkFull />
     </div>
   );
 };
