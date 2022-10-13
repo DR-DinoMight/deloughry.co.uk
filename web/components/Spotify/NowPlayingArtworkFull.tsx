@@ -30,7 +30,7 @@ export default function NowPlayingArtworkFull() {
     animation: 'fadein 2s ease-in'
   }
 
-  let overflowing = (nowPlayingRef.current.offsetWidth < nowPlayingRef.current.scrollWidth);
+  let overflowing = (nowPlayingRef?.current != null && (nowPlayingRef.current.offsetWidth < nowPlayingRef.current.scrollWidth));
 
   return (
     <div className="overflow-hidden relative m-auto w-full h-screen">
