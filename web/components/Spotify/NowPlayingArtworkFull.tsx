@@ -3,6 +3,7 @@ import {NowPlayingSong} from "../../lib/spotify";
 import Image from "next/future/image";
 import {fetcher} from "../../lib/fetcher";
 import { useEffect, useState } from 'react';
+import { Textfit } from 'react-textfit';
 
 
 export default function NowPlayingArtworkFull() {
@@ -33,15 +34,15 @@ export default function NowPlayingArtworkFull() {
       <div style={data?.isPlaying ? artworkStyle : {}} className="w-screen h-screen">
       </div>
       <div className='flex absolute bottom-10 left-10 gap-8 w-full'>
-        <img src={artwork} className="w-1/4 rounded-2xl border-8 border-white animate-fadein" 
+        <img src={artwork} className="w-1/4 rounded-2xl border-8 border-white animate-fadein"
         key={artwork}/>
-        <div className="overflow-hidden self-end w-2/4">
-          <p className="w-full text-4xl word-wrap">
+        <div className="overflow-hidden self-end w-full">
+          <p className="w-2/3 text-3xl font-black word-wrap">
           {data?.song?.artist}
           </p>
-          <p className="text-6xl text-white whitespace-nowrap animate-marquee">
-          {data?.song?.name}
-          </p>
+          <Textfit className="font-light text-white whitespace-nowrap animate-marquee" mode={"multi"}>
+             <p>{data?.song?.name}</p>
+          </Textfit>
         </div>
       </div>
     </div>

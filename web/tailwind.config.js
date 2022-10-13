@@ -34,8 +34,8 @@ module.exports = {
               },
               keyframes: {
                 marquee: {
-                  '0%': { transform: 'translateX(50%)' },
-                  '100%': { transform: 'translateX(-100%)' },
+                  '0%': { transform: 'translateX(101%)' },
+                  '100%': { transform: 'translateX(-25%)' },
                 },
                 fadein: {
                     '0%': { opacity: 0 },
