@@ -2,11 +2,12 @@ import useSWR from 'swr';
 import {NowPlayingSong} from "../../lib/spotify";
 import Image from "next/future/image";
 import {fetcher} from "../../lib/fetcher";
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Textfit } from 'react-textfit';
 
 
 export default function NowPlayingArtworkFull() {
+
   const {data} = useSWR<NowPlayingSong>('/api/spotify/now-playing', fetcher, { refreshInterval: 5000 });
 
   const [artwork, setArtwork ] = useState();
@@ -19,6 +20,8 @@ export default function NowPlayingArtworkFull() {
     }
     }, [data]);
 
+  const nowPlayingRef = useRef(null);
+
   const artworkStyle = {
     backgroundImage: `url("${artwork}")`,
     backgroundRepeat: 'no-repeat',
@@ -28,6 +31,8 @@ export default function NowPlayingArtworkFull() {
     transition: 'background-image 0.2s ease-in-out',
     animation: 'fadein 2s ease-in'
   }
+
+  let overflowing = (nowPlayingRef.current.offsetWidth < nowPlayingRef.current.scrollWidth);
 
   return (
     <div className="overflow-hidden relative m-auto w-full h-screen">
@@ -40,9 +45,9 @@ export default function NowPlayingArtworkFull() {
           <p className="w-2/3 text-3xl font-black word-wrap">
           {data?.song?.artist}
           </p>
-          <Textfit className="font-light text-white whitespace-nowrap animate-marquee" mode={"multi"}>
-             <p>{data?.song?.name}</p>
-          </Textfit>
+          <div className="overflow-hidden w-2/3 text-6xl font-light text-white whitespace-nowrap" ref={nowPlayingRef}>
+             <p className={`inline-block ${overflowing ? 'animate-bouncingText' : ''}`}>{data?.song?.name}</p>
+          </div>
         </div>
       </div>
     </div>
