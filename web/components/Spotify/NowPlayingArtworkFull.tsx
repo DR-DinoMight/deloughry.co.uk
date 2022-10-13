@@ -1,9 +1,7 @@
 import useSWR from 'swr';
 import {NowPlayingSong} from "../../lib/spotify";
-import Image from "next/future/image";
 import {fetcher} from "../../lib/fetcher";
 import { useEffect, useRef, useState } from 'react';
-import { Textfit } from 'react-textfit';
 
 
 export default function NowPlayingArtworkFull() {
