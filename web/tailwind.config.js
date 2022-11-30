@@ -27,15 +27,28 @@ module.exports = {
                 '10xl': '5rem',
             },
             animation: {
-                marquee: 'marquee 10s linear infinite',
-                spinslow: 'spin 10s linear infinite;'
+                marquee: 'marquee 20s ease-in-out infinite',
+                spinslow: 'spin 10s linear infinite;',
+                fadein: 'fadein 1s linear',
+                fadeinslow: 'fadein 4s linear',
+                bouncingText: 'bouncingText 30s ease-in-out infinite'
               },
               keyframes: {
                 marquee: {
-                  '0%': { transform: 'translateX(50%)' },
-                  '100%': { transform: 'translateX(-100%)' },
+                  '0%': { transform: 'translateX(0%)' },
+                  '100%': { transform: 'translateX(-100%)' }
                 },
-
+                fadein: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 100}
+                },
+                bouncingText: {
+                    '0%': {transform: 'translateX(0%)' },
+                    '50%': { transform: 'translateX(-50%)'},
+                    '55%': { transform: 'translateX(-50%)'},
+                    '70%': { transform: 'translateX(0%)'},
+                    '100%': { transform: 'translateX(0%)'}
+                }
               },
             colors: {
                 'twitch': '#6441a5',
