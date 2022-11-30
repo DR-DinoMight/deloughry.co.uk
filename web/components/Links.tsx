@@ -2,6 +2,7 @@ import GithubLogo from "../components/Icons/GithubLogo";
 import TwitterLogo from "../components/Icons/TwitterLogo";
 import TwitchLogo from "../components/Icons/TwitchLogo";
 import MothLogo from "../components/Icons/MothLogo";
+import MastadonLogo from "./Icons/MastadonLogo";
 
 
 
@@ -34,6 +35,14 @@ const links = {
       href: 'https://www.twitch.tv/dr_dinomight',
       icon: () => (
         <TwitchLogo />
+      ),
+      rel: 'me'
+    },
+    {
+      name: 'Mastadon',
+      href: 'https://phpc.social/@DrDinoMight',
+      icon: () => (
+        <MastadonLogo />
       ),
       rel: 'me'
     },
