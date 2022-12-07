@@ -9,10 +9,15 @@ import client from '../lib/sanity'
 import groq from "groq";
 import OpenGraph from "../components/OpenGraph";
 import BlinkingCursor from '../components/BlnkingCursor';
-import Script from 'next/script';
+import { useEffect } from 'react';
 
 // @ts-ignore
 const Home: NextPage = ({logs}) => {
+
+  useEffect( () => {
+    // @ts-ignore
+    import(/* webpackIgnore: true */ 'https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs');
+  }, []);
 
   return (
     <>
@@ -30,7 +35,7 @@ const Home: NextPage = ({logs}) => {
         <div className='mt-10'>
           <h2 className="text-3xl"><span className='text-red'>~/webring</span> <span
         className='text-white'>$ ls -la<BlinkingCursor cursor={'_'}/></span></h2>
-          <Script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></Script>
+
 
           <the-claw-webring-widget />
         </div>

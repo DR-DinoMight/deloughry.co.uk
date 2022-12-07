@@ -21,6 +21,7 @@ class MyDocument extends Document {
             title="RSS Feed for deloughry.co.uk"
             href="https://deloughry.co.uk/feed.xml"
           />
+
         </Head>
         <body>
           <Main/>

@@ -50,12 +50,6 @@ const Stats: NextPage = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-xl font-medium text-red mt-4">My Webring</h3>
-        <Script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></Script>
-
-        <the-claw-webring-widget />
-      </div>
-      <div>
         <h3 className="text-xl font-medium text-purple mt-8">Mentions about my site around the web</h3>
         <div className="flex flex-col">
           <WebMentions />
