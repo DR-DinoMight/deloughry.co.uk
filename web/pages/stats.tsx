@@ -13,6 +13,7 @@ import TotalPageViews from "../components/Website/TotallPageViews";
 import WebMentions from "../components/WebMentions";
 import OpenGraph from "../components/OpenGraph";
 import Battery from "../components/Personal/Battery";
+import Script from 'next/script';
 
 const Stats: NextPage = () => {
   return (
@@ -50,7 +51,7 @@ const Stats: NextPage = () => {
       </div>
       <div>
         <h3 className="text-xl font-medium text-red mt-4">My Webring</h3>
-        <script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></script>
+        <Script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></Script>
 
         <the-claw-webring-widget />
       </div>
