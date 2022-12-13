@@ -4,5 +4,5 @@ included_files = ["templates/**.html", "templates/**.jpg"]
 
 [[redirects]]
   from = "/.well-known/webfinger"
-  to = "https://phpc.social/.well-known/webfinger?resource=acct:@DrDinoMight@phpc.social"
+  to = "https://phpc.social/.well-known/webfinger?resource=acct:DrDinoMight@phpc.social"
   status = 200
