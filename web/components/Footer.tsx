@@ -11,10 +11,10 @@ export default function Footer() {
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
           {links.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <Link href={item.href}>
-                <a className="text-base font-medium text-white">
-                  {item.name}
-                </a>
+              <Link href={item.href} className="text-base font-medium text-white">
+
+                {item.name}
+
               </Link>
             </div>
           ))}
@@ -30,5 +30,5 @@ export default function Footer() {
         <p className="mt-8 text-center text-base text-gray-400">Made with Nerdy Passion {year} Matthew Peck-Deloughry.</p>
       </div>
     </footer>
-  )
+  );
 }

@@ -66,5 +66,5 @@ export const urlFor =  (source: SanityImageSource) => {
 
 // Grab the path from the url string
 export const stripDomainFromString = (url: string) => {
-  return url.replace(/^https?:\/\/[^\/]+/, '')
+  return url.replace(/^https?:\/\/[^\/]+/, '');
 }

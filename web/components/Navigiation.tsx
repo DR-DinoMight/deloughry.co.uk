@@ -31,18 +31,24 @@ const Navigation: NextPage = () => {
       <nav className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 `} aria-label="Top">
         <div className={` ${ navbarShrink ? 'py-3': 'py-6'} w-full flex items-center justify-between lg:border-none transition-all`}>
           <div className="flex items-center">
-            <Link href="/">
-              <a className={`${styles.title} ${ navbarShrink ? styles.small: ''} hover:border-0 hover:text-yellow-500 hover:bg-transparent no-underline hover:no-underline`} title="aka DR DinoMight">
-                <span>Matthew<br/>Peck-Deloughry</span>
-              </a>
+            <Link
+              href="/"
+              className={`${styles.title} ${ navbarShrink ? styles.small: ''} hover:border-0 hover:text-yellow-500 hover:bg-transparent no-underline hover:no-underline`}
+              title="aka DR DinoMight">
+
+              <span>Matthew<br/>Peck-Deloughry</span>
+
             </Link>
             <div className="hidden ml-10 space-x-8 lg:block">
               {links.main.map((link) => (
-                <Link key={link.name} href={link.href}>
-                  <a className={`text-base font-medium ${link.href === router.asPath ? 'text-yellow no-underline' : 'text-white'}`}>
-                    {link.name}
-                  </a>
-                </Link>
+                (<Link
+                  key={link.name}
+                  href={link.href}
+                  className={`text-base font-medium ${link.href === router.asPath ? 'text-yellow no-underline' : 'text-white'}`}>
+
+                  {link.name}
+
+                </Link>)
               ))}
             </div>
           </div>

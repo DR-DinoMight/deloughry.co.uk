@@ -27,30 +27,32 @@ const LogItem = ({log}) => {
   }
 
   return (
-    <Link href="/logs/[slug]" as={`/logs/${log.slug.current}`}>
-      <a key={log.title}
-         className={`no-underline ${categoryBorderColor} text-white transition cursor-pointer ease-in-out delay-150 motion-reduce:transition-none motion-reduce:transform-none hover:scale-95 hover:grow-2 rounded-lg border-4 hover:underline`}>
+    (<Link
+      href="/logs/[slug]"
+      as={`/logs/${log.slug.current}`}
+      key={log.title}
+      className={`no-underline ${categoryBorderColor} text-white transition cursor-pointer ease-in-out delay-150 motion-reduce:transition-none motion-reduce:transform-none hover:scale-95 hover:grow-2 rounded-lg border-4 hover:underline`}>
 
-        <div
-          className={` flex flex-col space-between shadow-lg overflow-hidden  flex-1 p-6 flex flex-col justify-between hover:pink-500/50 grow h-full space-3`}>
-          <div className="flex grow-0 items-center space-x-1 text-xs">
-            <time dateTime={formatPublishedDateForDateTime(log.publishedAt)}>{formatPublishedDateForDisplay(log.publishedAt)}</time>
+      <div
+        className={` flex flex-col space-between shadow-lg overflow-hidden  flex-1 p-6 flex flex-col justify-between hover:pink-500/50 grow h-full space-3`}>
+        <div className="flex grow-0 items-center space-x-1 text-xs">
+          <time dateTime={formatPublishedDateForDateTime(log.publishedAt)}>{formatPublishedDateForDisplay(log.publishedAt)}</time>
+        </div>
+        <h3 className="text-md font-semibold grow my-4 leading-1">{log.title}</h3>
+        <div className="flex justify-between text-xs">
+          <div className="flex flex-col">
+            <p>Posted in: </p>
+            {(log.category != undefined) && (<p className={`text-sm font-medium no-underline hover:no-underline ${categoryTextColor}`}>{log.category.title}</p>)}
           </div>
-          <h3 className="text-md font-semibold grow my-4 leading-1">{log.title}</h3>
-          <div className="flex justify-between text-xs">
-            <div className="flex flex-col">
-              <p>Posted in: </p>
-              {(log.category != undefined) && (<p className={`text-sm font-medium no-underline hover:no-underline ${categoryTextColor}`}>{log.category.title}</p>)}
-            </div>
-            <div className="flex flex-col">
-              <p>Views:</p>
-              <p><PageViews url={`/logs/${log.slug.current}`} className={`${categoryTextColor}`}/></p>
-            </div>
+          <div className="flex flex-col">
+            <p>Views:</p>
+            <p><PageViews url={`/logs/${log.slug.current}`} className={`${categoryTextColor}`}/></p>
           </div>
         </div>
-      </a>
-    </Link>
-  )
+      </div>
+
+    </Link>)
+  );
 }
 
 const LogList = (
@@ -67,13 +69,13 @@ const LogList = (
           return <LogItem key={index} log={log}/>
         })}
       </div>
-      <Link href="/logs/">
-        <a className="text-sm mt-12 ">
+      <Link href="/logs/" className="text-sm mt-12 ">
+        
           READ MORE LOG POSTS &gt;
-        </a>
+        
       </Link>
     </div>
-  )
+  );
 }
 
 export default LogList;

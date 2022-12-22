@@ -10,17 +10,15 @@ const nextConfig = {
         });
         return config;
     },
-    redirects: [
+    redirects: async function() {
+        return  [
         {
             source: '/blog/read/it-has-to-change-shape-up-do-better',
             destination: '/logs/it-has-to-change-shape-up-do-better',
             permanent: true,
         },
-    ],
+    ]},
     experimental: {
-        images: {
-            allowFutureImage: true,
-        },
     },
 }
 
