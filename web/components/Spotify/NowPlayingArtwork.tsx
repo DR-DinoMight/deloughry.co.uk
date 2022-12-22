@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import {NowPlayingSong} from "../../lib/spotify";
-import Image from "next/future/image";
+import Image from "next/image";
 import {fetcher} from "../../lib/fetcher";
 import { useEffect, useState } from 'react';
 
